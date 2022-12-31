@@ -3,4 +3,12 @@ from flask import render_template
 
 @app.route('/')
 def index():
-    return render_template("base.html", title="Jinja and Flask")
+    return render_template("base.html")
+
+@app.route('/')
+def index():
+    return render_template("base.html")
+
+@app.route('/')
+def index():
+    return render_template("base.html")
