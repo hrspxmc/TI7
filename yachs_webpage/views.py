@@ -30,22 +30,17 @@ def calendar():
     yacht_models = data_model.YachtType.query.all()
 
     booked_dates = [
-        {"id": xi,
-        "group": int(x.unit.unit_type.id),
-         "start": x.booked_from.strftime('%Y-%m-%d'),
-         "end": x.booked_to.strftime('%Y-%m-%d'),
-         "type": "range",
-         "content": x.unit.unit_name}
+        {
+            "id": xi,
+            "group": int(x.unit.unit_type.id),
+            "start": x.booked_from.strftime("%Y-%m-%d"),
+            "end": x.booked_to.strftime("%Y-%m-%d"),
+            "type": "range",
+            "content": x.unit.unit_name,
+        }
         for xi, x in enumerate(rental_dates)
     ]
 
-    groups_list = [
-        {"id": int(x.id),
-        "content": str(x.name)}
-        for x in yacht_models 
-    ]
+    groups_list = [{"id": int(x.id), "content": str(x.name)} for x in yacht_models]
 
-
-    #return booked_dates
-    #return groups_list
-    return render_template("calendar.html", dates = booked_dates, groups = groups_list)
+    return render_template("calendar.html", dates=booked_dates, groups=groups_list)

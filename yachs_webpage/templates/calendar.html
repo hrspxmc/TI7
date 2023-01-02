@@ -32,12 +32,11 @@
         item: "top",
       },
   };
-  
-  var timeline = new vis.Timeline(container)  
+
+  var timeline = new vis.Timeline(container)
   timeline.setOptions(options)
   timeline.setItems(new vis.DataSet({{ dates|safe }}))
   timeline.setGroups(new vis.DataSet({{ groups|safe }}))
-
 </script>
 
 {% endblock %}
