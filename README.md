@@ -1,6 +1,12 @@
 # TI7
 Strona na zaliczenie Technologii Internetowych
  
+Wykorzystane technologie:
++ Python (Framework Flask)
++ Silnik wzorców HTML Jinja2
++ HTML, CSS(Bootstrap5), JavaScript (pakiet vis-timeline.js)
++ Baza danych SQLite
+ 
 ## Opis typów jachtów
 
 Informacje na temat typu jachtów są zaciągane z bazy danych a strona jest generowana przy użyciu silnika Jinja2. Do aktualizacji zawartości strony wystarczy dodać nowy rekord do bazy danych.
